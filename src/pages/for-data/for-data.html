@@ -1,0 +1,24 @@
+<!--
+  Generated template for the ForDataPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Binding - For</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <!-- INPUT CON MODEL QUE AGREGA DINAMICAMENTE NUMERO A LISTA -->
+  <ion-item>
+    <ion-label floating>Number</ion-label>
+    <ion-input [(ngModel)]="addNumber" type="number"></ion-input>
+  </ion-item>
+  <button ion-button color="danger" outline (click)='add(addNumber)'>Add number</button>
+  <p *ngFor="let item of numbers">{{item}}</p>
+</ion-content>

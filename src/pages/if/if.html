@@ -1,0 +1,29 @@
+<!--
+  Generated template for the IfPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>If</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+<!-- ngIf QUE MUESTRA MENSAJE SEGUN EL VALOR DEL FLAG -->
+  <ion-row>
+    <ion-col col-s5>
+      <p *ngIf="flag" ion-text color="secondary">It's true</p>
+      <p *ngIf="!flag" ion-text color="danger">It's false</p>
+    </ion-col>
+  </ion-row>
+  <button ion-button color="light" (click)="changeValue()">Change Value</button>
+  <br>
+  <button ion-button color="light" (click)="back()">Back</button>
+
+
+</ion-content>
